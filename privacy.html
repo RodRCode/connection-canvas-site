@@ -39,7 +39,7 @@
   <ul>
     <li>No ads and no third-party analytics or tracking SDKs in the App as shipped.</li>
     <li>Your puzzle work is stored on your device; optional private iCloud sync uses your Apple ID.</li>
-    <li>Camera and Photos are used only when you choose those features.</li>
+    <li><strong>Photos</strong> are used only when you choose photo OCR import or save a screenshot of your grid.</li>
     <li>Optional tips are processed by Apple as In-App Purchases; tips do not unlock features.</li>
     <li>We do not sell your personal information.</li>
   </ul>
@@ -47,9 +47,9 @@
   <h2>Information the App stores</h2>
   <p>Depending on how you use the App, it may store on your device (and, if you enable sync, in your private iCloud/CloudKit data):</p>
   <ul>
-    <li><strong>History sessions</strong> — grid faces you loaded or entered, your color marks, card order, hypotheses text, notepad text, memory snapshots, timestamps, and optional puzzle date / source labels.</li>
+    <li><strong>History sessions</strong> — grid faces you loaded or entered (words, emoji, or image data), optional image-day alt labels when present, your color marks, card order, hypotheses text, notepad text, memory snapshots, timestamps, and optional puzzle date / source labels.</li>
     <li><strong>Settings</strong> — preferences such as appearance, Auto-save History, sort priority, high-contrast cards, and whether History iCloud sync is enabled (stored via system UserDefaults / app settings).</li>
-    <li><strong>Private puzzle fingerprints</strong> (if that feature is enabled in your build) — a hash of a board’s faces linked to a date <em>you</em> already loaded, used only to suggest a match for later OCR/manual import on your account. This is not a public database.</li>
+    <li><strong>Private puzzle fingerprints</strong> (when enabled in the build) — a hash of a board’s faces linked to a date <em>you</em> already loaded from the NYT endpoint, used only to suggest a match for later OCR/manual import on your account. This is not a public database.</li>
   </ul>
 
   <h2>iCloud</h2>
@@ -61,18 +61,23 @@
     You can turn sync off in the App’s Settings (restart may be required) or manage iCloud for the App in iOS Settings.
   </p>
 
-  <h2>Camera and Photos</h2>
+  <h2>Photos</h2>
   <ul>
-    <li><strong>Camera</strong> — only if you photograph a grid for on-device OCR import.</li>
-    <li><strong>Photo Library</strong> — only if you pick an existing photo for OCR, or save a screenshot of your marked grid when you choose to save.</li>
+    <li><strong>Photo Library (read)</strong> — only if you pick an existing photo for on-device OCR import of a 4×4 grid.</li>
+    <li><strong>Photo Library (add)</strong> — only if you choose to save a screenshot of your marked grid to Photos.</li>
   </ul>
-  <p>OCR runs on device. The App does not upload your photos to a developer-operated server.</p>
+  <p>
+    The App does not use the device camera hardware for capture. OCR and image processing run on device.
+    The App does not upload your photos to a developer-operated server.
+  </p>
 
   <h2>Network</h2>
   <p>
     If you choose to load a dated board, the App may request board faces from a publicly available
-    New York Times JSON URL. That request is made from your device. Category titles/solutions are stripped and not intended to be stored.
-    On image-based puzzle days, card images may be downloaded; alt text is not used as card faces by default (it can spoil visual clues).
+    New York Times JSON URL over HTTPS. That request is made from your device.
+    Category titles/solutions are stripped and not intended to be stored as answers.
+    On image-based puzzle days, card images may be downloaded; image alt text is stored only as optional metadata
+    and is <strong>hidden by default</strong> (you may turn on “Alt text” in the app if you want to see it).
     You can avoid network board load by using manual entry, samples, or photo OCR instead.
   </p>
   <p>
@@ -81,8 +86,8 @@
 
   <h2>Purchases (Tip Jar)</h2>
   <p>
-    The App may offer optional <strong>consumable tips</strong> (In-App Purchases). Payment is processed by
-    <strong>Apple</strong> through StoreKit. The developer does not receive your full payment card number.
+    The App offers optional <strong>consumable tips</strong> (In-App Purchases: small, medium, and large).
+    Payment is processed by <strong>Apple</strong> through StoreKit. The developer does not receive your full payment card number.
     Tips are voluntary thank-yous; they do <strong>not</strong> unlock features, remove limits, or change App functionality.
     Apple’s App Store and purchase privacy terms apply.
   </p>
@@ -100,10 +105,11 @@
 
   <h2>Your choices</h2>
   <ul>
-    <li>Decline Camera / Photos permissions; those features simply won’t run.</li>
+    <li>Decline Photos permissions; photo OCR and/or save-to-Photos simply won’t run.</li>
     <li>Keep iCloud History sync off for device-only storage.</li>
     <li>Turn off Auto-save History in Settings if you prefer only manual Save.</li>
-    <li>Use manual entry only if you prefer not to fetch a board over the network.</li>
+    <li>Use manual entry or samples if you prefer not to fetch a board over the network.</li>
+    <li>Leave Alt text off (default) so image-day labels stay hidden.</li>
     <li>Skip the Tip Jar entirely; the App works fully without tips.</li>
   </ul>
 
