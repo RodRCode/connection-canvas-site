@@ -27,7 +27,7 @@
   </nav>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">Connection Canvas · Last updated: July 22, 2026</p>
+  <p class="meta">Connection Canvas · Last updated: July 24, 2026</p>
 
   <p>
     This policy describes how the iOS/iPadOS app <strong>Connection Canvas</strong>
@@ -40,6 +40,7 @@
     <li>No ads and no third-party analytics or tracking SDKs in the App as shipped.</li>
     <li>Your puzzle work is stored on your device; optional private iCloud sync uses your Apple ID.</li>
     <li>Camera and Photos are used only when you choose those features.</li>
+    <li>Optional tips are processed by Apple as In-App Purchases; tips do not unlock features.</li>
     <li>We do not sell your personal information.</li>
   </ul>
 
@@ -47,7 +48,7 @@
   <p>Depending on how you use the App, it may store on your device (and, if you enable sync, in your private iCloud/CloudKit data):</p>
   <ul>
     <li><strong>History sessions</strong> — grid faces you loaded or entered, your color marks, card order, hypotheses text, notepad text, memory snapshots, timestamps, and optional puzzle date / source labels.</li>
-    <li><strong>Settings</strong> — preferences such as appearance, Auto-save History, and whether History iCloud sync is enabled (stored via system UserDefaults / app settings).</li>
+    <li><strong>Settings</strong> — preferences such as appearance, Auto-save History, sort priority, high-contrast cards, and whether History iCloud sync is enabled (stored via system UserDefaults / app settings).</li>
     <li><strong>Private puzzle fingerprints</strong> (if that feature is enabled in your build) — a hash of a board’s faces linked to a date <em>you</em> already loaded, used only to suggest a match for later OCR/manual import on your account. This is not a public database.</li>
   </ul>
 
@@ -69,18 +70,21 @@
 
   <h2>Network</h2>
   <p>
-    If you choose to load a daily board, the App may request board faces from a publicly available
-    New York Times JSON URL. That request is made from your device. Category answers/solutions are not intended to be stored by the App.
+    If you choose to load a dated board, the App may request board faces from a publicly available
+    New York Times JSON URL. That request is made from your device. Category titles/solutions are stripped and not intended to be stored.
+    On image-based puzzle days, card images may be downloaded; alt text is not used as card faces by default (it can spoil visual clues).
     You can avoid network board load by using manual entry, samples, or photo OCR instead.
   </p>
   <p>
     No developer analytics endpoints are used by the App as described in this policy.
   </p>
 
-  <h2>Purchases</h2>
+  <h2>Purchases (Tip Jar)</h2>
   <p>
-    If optional tip or other In-App Purchases are added later, payment is processed by Apple.
-    The developer does not receive your full payment card number. Apple’s purchase privacy terms apply.
+    The App may offer optional <strong>consumable tips</strong> (In-App Purchases). Payment is processed by
+    <strong>Apple</strong> through StoreKit. The developer does not receive your full payment card number.
+    Tips are voluntary thank-yous; they do <strong>not</strong> unlock features, remove limits, or change App functionality.
+    Apple’s App Store and purchase privacy terms apply.
   </p>
 
   <h2>Children</h2>
@@ -100,12 +104,13 @@
     <li>Keep iCloud History sync off for device-only storage.</li>
     <li>Turn off Auto-save History in Settings if you prefer only manual Save.</li>
     <li>Use manual entry only if you prefer not to fetch a board over the network.</li>
+    <li>Skip the Tip Jar entirely; the App works fully without tips.</li>
   </ul>
 
   <h2>Third parties</h2>
   <p>
     The New York Times is a third party unrelated to this App. Use of any NYT services or content is subject to their terms and policies.
-    Apple provides the App Store, iOS, and iCloud; their terms and privacy policies apply to those services.
+    Apple provides the App Store, iOS, iCloud, and In-App Purchase processing; their terms and privacy policies apply to those services.
   </p>
 
   <h2>Changes</h2>
