@@ -4,6 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Connection Canvas</title>
+  <meta name="application-name" content="Connection Canvas" />
+  <meta name="description" content="Connection Canvas is a mobile application for organizing your own guesses on a 4x4 word grid. Optional History sync uses your Google Account app storage on Android." />
+  <meta property="og:title" content="Connection Canvas" />
+  <meta property="og:site_name" content="Connection Canvas" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://canvas.rodrcode.com/" />
+  <link rel="canonical" href="https://canvas.rodrcode.com/" />
   <style>
     :root {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -12,65 +19,93 @@
       background: #fbfbf7;
     }
     body { max-width: 40rem; margin: 2rem auto; padding: 0 1.25rem 3rem; }
-    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.35rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.75rem; }
+    nav { margin-bottom: 1.5rem; font-size: 0.95rem; }
     .sub { color: #636366; margin-top: 0; }
     a { color: #5b2d8e; }
     ul { padding-left: 1.2rem; }
     footer { margin-top: 3rem; font-size: 0.85rem; color: #636366; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Connection Canvas",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS, iPadOS, Android",
+    "description": "Connection Canvas is a mobile worksheet app for marking and rearranging a 4x4 word grid while you solve a puzzle elsewhere. It does not provide answers.",
+    "url": "https://canvas.rodrcode.com/",
+    "author": { "@type": "Person", "name": "Raoul Rodriguez", "email": "rodrcode@gmail.com" }
+  }
+  </script>
 </head>
 <body>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms of Service</a> ·
+    <a href="support.html">Support</a>
+  </nav>
+
   <h1>Connection Canvas</h1>
-  <p class="sub">Application name: Connection Canvas</p>
-  <p class="sub">Official home page for the Connection Canvas mobile application (iPhone, iPad, and Android).</p>
+  <p class="sub">The application name is Connection Canvas.</p>
+  <p>Connection Canvas is a mobile application for iPhone, iPad, and Android.</p>
 
-  <h2 style="font-size: 1.1rem;">Purpose of the Connection Canvas application</h2>
+  <h2>Purpose of Connection Canvas</h2>
   <p>
-    The purpose of the Connection Canvas application is to give people a private worksheet for
-    organizing their own guesses on a 4×4 Connections-style word grid. Users load or type the
-    sixteen word faces, mark colors, rearrange cards, jot notes, and save History while they
-    solve the puzzle elsewhere. Connection Canvas does not provide answers or spoilers.
+    Connection Canvas is a private scratch-pad worksheet. People use Connection Canvas to load
+    or type sixteen word faces on a 4×4 grid, mark colors, rearrange cards, jot notes, and save
+    History while they solve a puzzle in another app. Connection Canvas does not score play,
+    does not provide answers or spoilers, and does not replace any third-party game.
   </p>
   <p>
-    Optional History sync uses <strong>your</strong> Apple ID (iCloud on iOS) or <strong>your</strong> Google
-    account (Drive app data on Android). Those copies stay in your account. Sync is off unless you turn it on.
-  </p>
-  <p>
-    When you turn on Sync History with Google, Connection Canvas asks Google for the
-    <strong>Drive app data</strong> permission only. That lets the app store and read a private
-    History copy in your own Google account so you can resume on another Android device.
-    Connection Canvas cannot see your regular Drive files, Gmail, or Photos.
-    The developer cannot open your app-data folder. You can turn sync off or revoke access
-    in your Google Account. See the
-    <a href="privacy.html">Privacy Policy</a> for details.
+    Connection Canvas works fully on the device. Saving History is optional. Syncing History
+    across devices is optional and off unless you turn it on.
   </p>
 
-  <p><strong>Not affiliated with, endorsed by, or associated with The New York Times.</strong></p>
-
-  <p><strong>Does not provide answers or spoilers. No ads and no tracking.</strong></p>
-
-  <h2 style="font-size: 1.1rem;">Highlights</h2>
+  <h2>Features of Connection Canvas</h2>
   <ul>
-    <li>Load dated boards (faces only), samples, manual entry, or photo OCR</li>
-    <li>Multi-color marks, color swap, sort, shuffle, reset layout</li>
-    <li>Home Screen–style rearrange with row move</li>
-    <li>Optional Alt text on image days (off by default)</li>
-    <li>Calendar History with purple rings; long-press to delete a day’s save</li>
-    <li>Samples always reload originals; resume practice under Other sessions</li>
-    <li>Auto-save History + optional private iCloud (iOS) or Google Drive app-data (Android) sync</li>
-    <li>Optional Tip Jar — never unlocks features</li>
+    <li>Load a dated board (faces only), samples, manual entry, or on-device photo OCR</li>
+    <li>Multi-color marks, rings, color swap, sort, shuffle, and reset</li>
+    <li>Rearrange cards; save History; notepad and category hypotheses</li>
+    <li>Optional Tip Jar thank-yous that never unlock features</li>
   </ul>
 
-  <ul>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-    <li><a href="support.html">Support</a></li>
-  </ul>
+  <h2>How Connection Canvas uses Google Account data</h2>
+  <p>
+    Connection Canvas requests Google Account access only if you turn on
+    <strong>Sync History with Google</strong> on Android and sign in.
+    The only permission Connection Canvas asks for is hidden
+    <strong>application data</strong> in your own Google Account
+    (OAuth scope <code>drive.appdata</code>).
+  </p>
+  <p>
+    That storage holds your worksheet History (faces you loaded or typed, color marks, card
+    order, notes) so you can resume on another Android device signed into the same account.
+    Connection Canvas cannot list, open, or change your regular files, Gmail, Photos, or
+    shared folders. The developer of Connection Canvas cannot open your application-data
+    folder. You can turn sync off in Connection Canvas Settings or revoke access in your
+    Google Account.
+  </p>
+  <p>
+    Read the <a href="privacy.html">Privacy Policy</a> for Connection Canvas.
+    Connection Canvas’s use of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </p>
+
+  <h2>Affiliation</h2>
+  <p>
+    Connection Canvas is an unofficial tool. Connection Canvas is not affiliated with,
+    endorsed by, or associated with The New York Times or with Google as a product.
+  </p>
 
   <footer>
     <p>
-      Support email: <a href="mailto:rodrcode@gmail.com">rodrcode@gmail.com</a><br />
-      Optional tips never unlock features. Respect NYT Terms of Service for any third-party content.
+      Support: <a href="mailto:rodrcode@gmail.com">rodrcode@gmail.com</a><br />
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a> ·
+      <a href="support.html">Support</a>
     </p>
   </footer>
 </body>
