@@ -4,6 +4,7 @@
     {
       "puzzleId": 1201,
       "printDate": "2026-08-19",
+      "bind": "slot",
       "palette": ["#FC716B", "#EFEFE6"],
       "mask": [0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0]
     }
